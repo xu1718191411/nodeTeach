@@ -1,11 +1,18 @@
-var http = require("http")
+var express = require('express')
+var session = require('cookie-session')
 
-var app = http.createServer(cb)
+var app = express()
 
-function cb(req,res){
-    res.write('Hello World')
-    res.end()
-}
+app.set('trust proxy', 1) // trust first proxy
 
+app.use(session({
+    keys: ['key1', 'key2']
+}))
 
-app.listen(8080)
+app.use(function (req, res, next) {
+    var n = req.session.views || 0
+    req.session.views = ++n
+    res.end(n + ' views')
+})
+
+app.listen("127.0.0.1",3000)

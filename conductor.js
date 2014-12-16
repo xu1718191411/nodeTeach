@@ -35,6 +35,8 @@ function cb(req,res){
 }
 
 server.listen(8083)
+console.log("server is listening at 8083")
+
 
 function cb2(err,data,res){
     if(err) throw err
