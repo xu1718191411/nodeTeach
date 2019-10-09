@@ -3,38 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script  src="../public/react.development.js"></script>
-    <script  src="../public/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="../public/react.development.js"></script>
+    <script src="../public/react-dom.development.js"></script>
 </head>
 <body>
 
-    <div id="react-root">
+    <div id="react-root"></div>
 
-    </div>
 
 </body>
 
-<script type="text/babel">
+<script>
 
     class BaseComponent extends React.Component{
-
         constructor(props){
             super(props)
         }
 
         render(){
-            return <div>render</div>
+            const element = React.createElement("div",{},"this is element")
+            return element
         }
-
     }
+
 
     const element = document.getElementById("react-root")
     const component = React.createElement(BaseComponent)
 
-    console.log(1111)
-
     ReactDOM.render(component,element)
+
 
 
 </script>
