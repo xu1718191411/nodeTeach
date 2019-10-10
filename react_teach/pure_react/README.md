@@ -1,8 +1,12 @@
 https://reactjs.org/docs/getting-started.html
 
 通过创建react app的方式，创建react项目
-
+按照官方文档，执行了下面的命令
 npx create-react-app my-app
+
+拿到这个项目后
+cd my-app
+npm install
 
 
 1.state改变的时候会触发render()
