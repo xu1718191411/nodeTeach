@@ -15013,7 +15013,7 @@ function ChildReconciler(shouldTrackSideEffects) {
       if (existingChild.key !== null) {
         existingChildren.set(existingChild.key, existingChild);
       } else {
-        existingChildren.set(existingChild.index, existingChild);
+        existingChildren.set(existingChild.index_by_jsx_transform, existingChild);
       }
 
       existingChild = existingChild.sibling;
@@ -15366,7 +15366,7 @@ function ChildReconciler(shouldTrackSideEffects) {
     var nextOldFiber = null;
 
     for (; oldFiber !== null && newIdx < newChildren.length; newIdx++) {
-      if (oldFiber.index > newIdx) {
+      if (oldFiber.index_by_jsx_transform > newIdx) {
         nextOldFiber = oldFiber;
         oldFiber = null;
       } else {
@@ -15546,7 +15546,7 @@ function ChildReconciler(shouldTrackSideEffects) {
     var step = newChildren.next();
 
     for (; oldFiber !== null && !step.done; newIdx++, step = newChildren.next()) {
-      if (oldFiber.index > newIdx) {
+      if (oldFiber.index_by_jsx_transform > newIdx) {
         nextOldFiber = oldFiber;
         oldFiber = null;
       } else {
@@ -19997,7 +19997,7 @@ function remountFiber(current$$1, oldWorkInProgress, newWorkInProgress) {
     current$$1.alternate = null;
     oldWorkInProgress.alternate = null; // Connect to the new tree.
 
-    newWorkInProgress.index = oldWorkInProgress.index;
+    newWorkInProgress.index = oldWorkInProgress.index_by_jsx_transform;
     newWorkInProgress.sibling = oldWorkInProgress.sibling;
     newWorkInProgress.return = oldWorkInProgress.return;
     newWorkInProgress.ref = oldWorkInProgress.ref; // Replace the child/sibling pointers above it.
@@ -26866,7 +26866,7 @@ function assignFiberPropertiesInDEV(target, source) {
   target.return = source.return;
   target.child = source.child;
   target.sibling = source.sibling;
-  target.index = source.index;
+  target.index = source.index_by_jsx_transform;
   target.ref = source.ref;
   target.pendingProps = source.pendingProps;
   target.memoizedProps = source.memoizedProps;
