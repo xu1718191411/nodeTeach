@@ -19,8 +19,6 @@ const initState = {
 
 const globalReducer = (state, action) => {
 
-    console.log(11111)
-
     if (typeof state == undefined){
         return initState
     }

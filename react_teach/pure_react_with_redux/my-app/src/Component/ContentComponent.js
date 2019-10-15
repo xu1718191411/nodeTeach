@@ -1,11 +1,34 @@
 import React from 'react'
+import {bindActionCreators} from "redux";
+import {connect} from "react-redux";
 
-export class ContentComponent extends React.Component{
+class Component extends React.Component{
     constructor(props){
         super(props)
     }
 
     render(){
-        return <div>ContentComponent</div>
+        return <div>{this.props.content}</div>
     }
 }
+
+
+const MapDispatchToProps = (dispatch) => {
+
+    const event =  {
+
+    }
+
+    return bindActionCreators(event,dispatch)
+}
+
+const MapStateToProps = (state) => {
+
+    return {
+        content:state.globalState.content
+    }
+}
+
+
+export const ContentComponent = connect(MapStateToProps,MapDispatchToProps)(Component)
+
