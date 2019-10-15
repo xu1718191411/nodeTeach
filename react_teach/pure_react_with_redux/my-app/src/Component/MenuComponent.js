@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import {selectMenu} from "../Actions/action_creator";
+import {bindActionCreators} from "redux";
 class Component extends React.Component{
     constructor(props){
         super(props)
@@ -8,7 +9,7 @@ class Component extends React.Component{
 
     onMenuSelect(menu){
         console.log("menu")
-        this.props.selectMenuItemByDispatch(menu);
+        this.props.selectMenu(menu);
     }
 
     render() {
@@ -25,11 +26,14 @@ class Component extends React.Component{
 
 const MapDispatchToProps = (dispatch) => {
 
-    return {
-        selectMenuItemByDispatch:(menu)=>{
-            dispatch(selectMenu(menu))
+    const event = {
+        selectMenu:(menu)=>{
+            return selectMenu(menu)
         }
     }
+
+    return bindActionCreators(event,dispatch)
+
 }
 
 const MapStateToProps = (state) => {

@@ -19,6 +19,8 @@ const initState = {
 
 const globalReducer = (state, action) => {
 
+    console.log(11111)
+
     if (typeof state == undefined){
         return initState
     }
@@ -39,13 +41,6 @@ const globalReducer = (state, action) => {
     }
 
 }
-
-// export const reducer = (state={},action) => {
-//     return {
-//         globalState:globalReducer
-//     }
-// }
-
 
 export const reducer = combineReducers({
     globalState:globalReducer
