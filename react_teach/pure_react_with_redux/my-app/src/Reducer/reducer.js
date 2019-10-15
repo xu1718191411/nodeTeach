@@ -5,20 +5,19 @@ import {
     SELECT_VOCABULARY_TYPE
 } from "../Actions/action_types";
 
+import {combineReducers} from "redux";
 
 
-
-const golbalState = {
+export const globalState = {
     menu:"text",
     content:"this is text page"
 }
 
 const initState = {
-    globalState:golbalState
+    globalState:globalState
 }
 
-
-function globalReducer(state, action) {
+const globalReducer = (state, action) => {
 
     if (typeof state == undefined){
         return initState
@@ -41,8 +40,13 @@ function globalReducer(state, action) {
 
 }
 
-export const reducer = (state={},action) => {
-    return {
-        globalState:globalReducer
-    }
-}
+// export const reducer = (state={},action) => {
+//     return {
+//         globalState:globalReducer
+//     }
+// }
+
+
+export const reducer = combineReducers({
+    globalState:globalReducer
+});

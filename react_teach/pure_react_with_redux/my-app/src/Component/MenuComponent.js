@@ -14,10 +14,10 @@ class Component extends React.Component{
     render() {
         return <div className={"menu"}>
             <div onClick={_=>{this.onMenuSelect("text")}}>text</div>
-            <div>follow</div>
-            <div>vocabulary</div>
-            <div>sentence</div>
-            <div>my</div>
+            <div onClick={_=>{this.onMenuSelect("follow")}}>follow</div>
+            <div onClick={_=>{this.onMenuSelect("vocabulary")}}>vocabulary</div>
+            <div onClick={_=>{this.onMenuSelect("sentence")}}>sentence</div>
+            <div onClick={_=>{this.onMenuSelect("my")}}>my</div>
         </div>
     }
 }

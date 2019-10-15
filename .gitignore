@@ -1,0 +1,5 @@
+react_teach/pure_react/my-app/node_modules/
+react_teach/pure_react_with_redux/my-app/node_modules/
+package-lock.json
+node_modules
+idea
