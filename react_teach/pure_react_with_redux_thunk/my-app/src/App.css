@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+}
+
+.menu{
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
