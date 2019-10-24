@@ -4,8 +4,9 @@ import {
     CHOOSE_SENTENCE_TYPE,
     CHOOSE_SENTENCE,
     CHOOSE_FOLLOW,
-    CHOOSE_FOLLOW_TYPE, CHOOSE_VOCABULARY_TYPE, CHOOSE_VOCABULARY, CHOOSE_MY_TYPE, CHOOSE_MY
+    CHOOSE_FOLLOW_TYPE, CHOOSE_VOCABULARY_TYPE, CHOOSE_VOCABULARY, CHOOSE_MY_TYPE, CHOOSE_MY, FETCH_CONTENT
 } from "./action_types";
+import {httpClient} from "../HttpClient/HttpClient";
 
 export const selectMenu = (menu) => {
 
@@ -42,4 +43,17 @@ export const selectMenu = (menu) => {
                 type:CHOOSE_TEXT_TYPE
             }
     }
+}
+
+export const fetchContent = (content) => {
+    return {
+        type:FETCH_CONTENT,
+        content:content
+    }
+}
+
+export const thunkFetchContent = (menu) => (dispatch,getState) => {
+        httpClient.requestContent(menu).then(res=>{
+            dispatch(fetchContent(res))
+        })
 }

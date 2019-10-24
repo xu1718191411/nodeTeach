@@ -26,6 +26,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     const event = {}
     bindActionCreators(event,dispatch)
+    return event
 }
 
 

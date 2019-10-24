@@ -10,4 +10,6 @@ export const CHOOSE_VOCABULARY_TYPE = "vocabulary"
 export const CHOOSE_FOLLOW_TYPE = "follow"
 export const CHOOSE_MY_TYPE = "my"
 
+export const FETCH_CONTENT = "FETCH_CONTENT"
+
 
