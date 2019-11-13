@@ -9,3 +9,4 @@
 ## 2.Catalog
  - [simple](./simple)
  - [hierarchy_component](./hierarchy_component)
+ - [redux_simple](./redux_simple)
