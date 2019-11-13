@@ -11,6 +11,7 @@
  - When the state changes, mapStateToProps will be invoked and props can be remade according to the state
  
  
+```text
      - in the past
      
       dom event -> child component function -> parent component function -> .... -> root component function
@@ -18,6 +19,7 @@
      child component  <-  pass state to childComponent as childComponent's props    <-     change state
           ↓
        render()
+     
      
      - now
      dom event -> dispatch(action) -> reducer
@@ -27,7 +29,7 @@
                             every/specific component mapStateToProps
                                          ↓
                                       render()                      
-                                      
+```                                      
 
 ## 3. process
  - npm install
