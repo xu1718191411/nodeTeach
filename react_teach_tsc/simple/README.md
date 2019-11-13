@@ -1,17 +1,17 @@
 # The Minimum implementation of react project written in tsc react webpack package sample
 
-## purpose
+## 1. purpose
 ### - Usage of build a start-up react project with typescript
 ### - Learning the usage of webpack
 
-## points
+## 2. points
 ### - Webpack resolve the *.tsx files with the usage of ts-loader
 ### - Webpack resolve the *.css files with the usage of style-loader and css-loader
 
-## process
+## 3. process
 ### - npm install
 ### - npm run serve
 
-## preview
+## 4. preview
 
 ![](images/screenshot.png)
