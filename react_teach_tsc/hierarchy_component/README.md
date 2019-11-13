@@ -29,5 +29,5 @@
 ![](./images/screenshot.gif) 
 
 ## 4. process
-### - npm install
-### - npm run serve
+ - npm install
+ - npm run serve
