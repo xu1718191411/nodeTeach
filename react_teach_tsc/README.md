@@ -2,5 +2,5 @@
 ## we will start from the basic to supervisor gradually
 
 ## Catalog
-### - simple
-### - hierarchy_component
+### - [simple]:./simple simple      "simple"
+### - [hierarchy_component]:./hierarchy_component       "hierarchy_component"
