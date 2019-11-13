@@ -1,0 +1,10 @@
+.menu{
+    width: 360px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content-component-content{
+    font-size: 26px;
+}
