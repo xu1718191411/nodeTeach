@@ -11,3 +11,7 @@
 ## process
 ### - npm install
 ### - npm run serve
+
+## preview
+
+![](./simple/images/screenshot.png)
